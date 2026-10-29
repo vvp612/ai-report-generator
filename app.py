@@ -32,7 +32,7 @@ SAMPLE = (
 
 
 def login_view() -> None:
-    st.title("📊 Digest Studio")
+    st.title("Digest Studio")
     st.caption("Turn raw team notes into a slide-ready weekly digest.")
     with st.form("login"):
         username = st.text_input("Username", autocomplete="username")
@@ -55,7 +55,7 @@ def main_view() -> None:
             st.session_state.clear()
             st.rerun()
 
-    st.title("📊 Digest Studio")
+    st.title("Digest Studio")
     mode = st.selectbox("Analysis mode", list(modes.MODES), format_func=MODE_LABELS.get)
     period = st.text_input("Period label", "week of 27 Oct 2026")
     notes = st.text_area("Raw notes (standup, incidents, releases…)", height=240, placeholder=SAMPLE)
